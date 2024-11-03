@@ -9,6 +9,7 @@
 <?import javafx.collections.FXCollections?>
 <?import java.lang.String?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="app.localizeddatabasehomeassigment.Controller">
     <padding>
@@ -16,28 +17,36 @@
     </padding>
 
     <!-- Language Selection -->
-    <Label fx:id="selectLanguageLabel" text="Select Language:"/>
-    <ComboBox fx:id="languageComboBox" onAction="#handleLanguageChange">
-        <items>
-            <FXCollections fx:factory="observableArrayList">
-                <String fx:value="English"/>
-                <String fx:value="Farsi"/>
-                <String fx:value="Japanese"/>
-            </FXCollections>
-        </items>
-    </ComboBox>
+    <HBox spacing="10.0" alignment="CENTER_LEFT">
+        <Label fx:id="selectLanguageLabel" text="Select Language:"/>
+        <ComboBox fx:id="languageComboBox" onAction="#handleLanguageChange">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="English"/>
+                    <String fx:value="Farsi"/>
+                    <String fx:value="Japanese"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+    </HBox>
 
     <!-- First Name Field -->
-    <Label fx:id="firstNameLabel" text="First Name:"/>
-    <TextField fx:id="firstNameField"/>
+    <HBox spacing="10.0" alignment="CENTER_LEFT">
+        <Label fx:id="firstNameLabel" text="First Name:"/>
+        <TextField fx:id="firstNameField"/>
+    </HBox>
 
     <!-- Last Name Field -->
-    <Label fx:id="lastNameLabel" text="Last Name:"/>
-    <TextField fx:id="lastNameField"/>
+    <HBox spacing="10.0" alignment="CENTER_LEFT">
+        <Label fx:id="lastNameLabel" text="Last Name:"/>
+        <TextField fx:id="lastNameField"/>
+    </HBox>
 
     <!-- Email Field -->
-    <Label fx:id="emailLabel" text="Email:"/>
-    <TextField fx:id="emailField"/>
+    <HBox spacing="10.0" alignment="CENTER_LEFT">
+        <Label fx:id="emailLabel" text="Email:"/>
+        <TextField fx:id="emailField"/>
+    </HBox>
 
     <!-- Save Button -->
     <Button fx:id="saveButton" text="Save" onAction="#handleSave"/>
